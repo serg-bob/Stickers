@@ -1,0 +1,29 @@
+{
+  "name": "Stickers",
+  "version": "0.0.1",
+  "summary": "Text and image stickers with resizing, rotation and scaling.",
+  "description": "This is library for manipulating a text and image stickers in iOS apps.",
+  "homepage": "https://github.com/serg-bob/Stickers.git",
+  "license": "MIT",
+  "authors": {
+    "Sergey Penziy": "sergbob84@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/serg-bob/Stickers.git",
+    "tag": "0.0.1"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": [
+    "sources/**/*.{m,h}"
+  ],
+  "frameworks": [
+    "Foundation",
+    "UIKit",
+    "CoreGraphics"
+  ],
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO"
+  }
+}

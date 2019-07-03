@@ -1,0 +1,16 @@
+PODS:
+  - Stickers (0.0.1)
+
+DEPENDENCIES:
+  - Stickers (from `../..`)
+
+EXTERNAL SOURCES:
+  Stickers:
+    :path: "../.."
+
+SPEC CHECKSUMS:
+  Stickers: 8ce0e1ffaa6e412720293240885e3dd37287338f
+
+PODFILE CHECKSUM: c6a6c01d3afaec0cef592daeadbc5b4a3dfcec0f
+
+COCOAPODS: 1.6.2
