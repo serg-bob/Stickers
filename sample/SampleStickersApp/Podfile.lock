@@ -1,16 +1,38 @@
 PODS:
+  - IDPCastable (0.1.3)
+  - IDPRootViewGettable (0.1.0):
+    - IDPCastable
+  - SnapKit (5.0.0)
   - Stickers (0.0.1)
 
 DEPENDENCIES:
+  - IDPRootViewGettable (from `https://github.com/idapgroup/IDPRootViewGettable.git`, commit `4cd3852`)
+  - SnapKit (~> 5.0.0)
   - Stickers (from `../..`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IDPCastable
+    - SnapKit
+
 EXTERNAL SOURCES:
+  IDPRootViewGettable:
+    :commit: 4cd3852
+    :git: https://github.com/idapgroup/IDPRootViewGettable.git
   Stickers:
     :path: "../.."
 
-SPEC CHECKSUMS:
-  Stickers: 8ce0e1ffaa6e412720293240885e3dd37287338f
+CHECKOUT OPTIONS:
+  IDPRootViewGettable:
+    :commit: 4cd3852
+    :git: https://github.com/idapgroup/IDPRootViewGettable.git
 
-PODFILE CHECKSUM: c6a6c01d3afaec0cef592daeadbc5b4a3dfcec0f
+SPEC CHECKSUMS:
+  IDPCastable: 15051ffccffca8408dd633fbc2a19584e2e11e9c
+  IDPRootViewGettable: a558b25533b43500531885a5b8ba5d51c372ccdc
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  Stickers: 8a5225582f891f1a16a3e1fd6a07dad1cb7c78b0
+
+PODFILE CHECKSUM: 6b84bcd6400aa99d3a760681d310fc8c48910916
 
 COCOAPODS: 1.6.2

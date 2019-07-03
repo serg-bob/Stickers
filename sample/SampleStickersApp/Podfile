@@ -1,8 +1,12 @@
-# Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-def available_pods
+def available_pod
   pod 'Stickers', :path => '../..'    
+end
+
+def ui
+  pod 'IDPRootViewGettable', :git => 'https://github.com/idapgroup/IDPRootViewGettable.git', :commit => '4cd3852'
+  pod 'SnapKit',                '~> 5.0.0'
 end
 
 target 'SampleStickersApp' do
@@ -10,6 +14,6 @@ target 'SampleStickersApp' do
   use_frameworks!
 
   # Pods for SampleStickersApp
-  available_pods
-
+  available_pod
+  ui
 end

@@ -11,6 +11,9 @@
 		D5BFE75E22CCA4A300E71F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE75D22CCA4A300E71F12 /* AppDelegate.swift */; };
 		D5BFE76522CCA4A400E71F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE76422CCA4A400E71F12 /* Assets.xcassets */; };
 		D5BFE76822CCA4A400E71F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE76622CCA4A400E71F12 /* LaunchScreen.storyboard */; };
+		D5BFE77322CCA98F00E71F12 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */; };
+		D5BFE77422CCA98F00E71F12 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */; };
+		D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77522CCA99F00E71F12 /* SampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		D5BFE76422CCA4A400E71F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5BFE76722CCA4A400E71F12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5BFE76922CCA4A400E71F12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
+		D5BFE77522CCA99F00E71F12 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		D8E95F76AD9660E401776A25 /* Pods-SampleStickersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleStickersApp.release.xcconfig"; path = "Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,12 +72,31 @@
 		D5BFE75C22CCA4A300E71F12 /* SampleStickersApp */ = {
 			isa = PBXGroup;
 			children = (
+				D5BFE76F22CCA94200E71F12 /* SampleViewController */,
 				D5BFE75D22CCA4A300E71F12 /* AppDelegate.swift */,
 				D5BFE76422CCA4A400E71F12 /* Assets.xcassets */,
 				D5BFE76622CCA4A400E71F12 /* LaunchScreen.storyboard */,
 				D5BFE76922CCA4A400E71F12 /* Info.plist */,
 			);
 			path = SampleStickersApp;
+			sourceTree = "<group>";
+		};
+		D5BFE76F22CCA94200E71F12 /* SampleViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5BFE77022CCA96A00E71F12 /* View */,
+				D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */,
+				D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */,
+			);
+			path = SampleViewController;
+			sourceTree = "<group>";
+		};
+		D5BFE77022CCA96A00E71F12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5BFE77522CCA99F00E71F12 /* SampleView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FA9AD0300BF5BEA3C5BAF514 /* Frameworks */ = {
@@ -93,6 +118,7 @@
 				D5BFE75622CCA4A300E71F12 /* Sources */,
 				D5BFE75722CCA4A300E71F12 /* Frameworks */,
 				D5BFE75822CCA4A300E71F12 /* Resources */,
+				5EF3DD4D7F2AB44453C8CF8D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BFE76822CCA4A400E71F12 /* LaunchScreen.storyboard in Resources */,
+				D5BFE77422CCA98F00E71F12 /* SampleViewController.xib in Resources */,
 				D5BFE76522CCA4A400E71F12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +198,34 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5EF3DD4D7F2AB44453C8CF8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IDPCastable/IDPCastable.framework",
+				"${BUILT_PRODUCTS_DIR}/IDPRootViewGettable/IDPRootViewGettable.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Stickers/Stickers.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDPCastable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDPRootViewGettable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stickers.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -178,6 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BFE77322CCA98F00E71F12 /* SampleViewController.swift in Sources */,
+				D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */,
 				D5BFE75E22CCA4A300E71F12 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
