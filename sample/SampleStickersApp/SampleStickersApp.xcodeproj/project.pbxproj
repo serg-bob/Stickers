@@ -214,8 +214,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IDPCastable/IDPCastable.framework",
-				"${BUILT_PRODUCTS_DIR}/IDPRootViewGettable/IDPRootViewGettable.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Stickers/Stickers.framework",
 			);
@@ -223,8 +221,6 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDPCastable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IDPRootViewGettable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stickers.framework",
 			);

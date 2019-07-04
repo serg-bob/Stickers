@@ -11,7 +11,14 @@ import UIKit
 class FirstViewController: UIViewController {
 
     @IBAction func onPresent() {
-        self.navigationController?.pushViewController(SampleViewController(), animated: true)
+        let callbackEvents: EventHandler<SampleViewController.CallbackEvents> = { events in
+            switch events {
+            case .back:
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        let controller = SampleViewController(callbackEvents: callbackEvents)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
 
 }

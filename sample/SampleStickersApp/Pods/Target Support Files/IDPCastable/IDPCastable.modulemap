@@ -1,6 +1,0 @@
-framework module IDPCastable {
-  umbrella header "IDPCastable-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,25 +7,38 @@
 //
 
 import UIKit
-import IDPRootViewGettable
 import Stickers
 
 typealias EventHandler<Events> = (Events) -> ()
 
-class SampleViewController: UIViewController, RootViewGettable {
+class SampleViewController: UIViewController {
     
-    typealias RootViewType = SampleView
+    enum CallbackEvents {
+        case back
+    }
     
     enum ButtonActions {
         case addImage
         case addText
     }
     
-    // MARK: - Initializations and Deallocations
+    // MARK: - Properties
+    
+    private let callbackEvents: EventHandler<CallbackEvents>
     
     public var actions: EventHandler<ButtonActions>?
+    public var rootView: SampleView? {
+        return self.viewIfLoaded as? SampleView
+    }
     
-    init() {
+    // MARK: - Initializations and Deallocations
+    
+    deinit {
+        debugPrint("deinit: \(String(describing: type(of: self)))")
+    }
+    
+    init(callbackEvents: @escaping EventHandler<CallbackEvents>) {
+        self.callbackEvents = callbackEvents
         super.init(nibName: String(describing: type(of: self)), bundle: nil)
     }
     
@@ -55,9 +68,9 @@ class SampleViewController: UIViewController, RootViewGettable {
         self.actions = { events in
             switch events {
             case .addImage:
-                print("addImage")
+                debugPrint("addImage")
             case  .addText:
-                print("addText")
+                debugPrint("addText")
             }
         }
     }
@@ -71,6 +84,6 @@ extension SampleViewController {
     }
     
     @objc private func onBack() {
-        self.navigationController?.popViewController(animated: true)
+        self.callbackEvents(.back)
     }
 }

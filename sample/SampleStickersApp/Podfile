@@ -5,7 +5,6 @@ def available_pod
 end
 
 def ui
-  pod 'IDPRootViewGettable', :git => 'https://github.com/idapgroup/IDPRootViewGettable.git', :commit => '4cd3852'
   pod 'SnapKit',                '~> 5.0.0'
 end
 
