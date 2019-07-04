@@ -1,23 +1,16 @@
 PODS:
-  - SnapKit (5.0.0)
   - Stickers (0.0.1)
 
 DEPENDENCIES:
-  - SnapKit (~> 5.0.0)
   - Stickers (from `../..`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SnapKit
 
 EXTERNAL SOURCES:
   Stickers:
     :path: "../.."
 
 SPEC CHECKSUMS:
-  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   Stickers: 8a5225582f891f1a16a3e1fd6a07dad1cb7c78b0
 
-PODFILE CHECKSUM: 1c08dad506ae3d176059b5a5dd172b85a9685ddc
+PODFILE CHECKSUM: 05fc3da81c6131d20c43bd4ce05f9509e5d67d69
 
 COCOAPODS: 1.6.2

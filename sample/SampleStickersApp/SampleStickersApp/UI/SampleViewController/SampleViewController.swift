@@ -9,9 +9,7 @@
 import UIKit
 import Stickers
 
-typealias EventHandler<Events> = (Events) -> ()
-
-class SampleViewController: UIViewController {
+class SampleViewController: BaseViewController<SampleView, SampleViewController.CallbackEvents> {
     
     enum CallbackEvents {
         case back
@@ -24,27 +22,7 @@ class SampleViewController: UIViewController {
     
     // MARK: - Properties
     
-    private let callbackEvents: EventHandler<CallbackEvents>
-    
     public var actions: EventHandler<ButtonActions>?
-    public var rootView: SampleView? {
-        return self.viewIfLoaded as? SampleView
-    }
-    
-    // MARK: - Initializations and Deallocations
-    
-    deinit {
-        debugPrint("deinit: \(String(describing: type(of: self)))")
-    }
-    
-    init(callbackEvents: @escaping EventHandler<CallbackEvents>) {
-        self.callbackEvents = callbackEvents
-        super.init(nibName: String(describing: type(of: self)), bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     // MARK: - View Controller Lifecycle
     
@@ -53,6 +31,8 @@ class SampleViewController: UIViewController {
         self.configureNawBar()
         self.bindActions()
     }
+    
+    // MARK: - Action
     
     @IBAction func addImageSticker(_ sender: UIButton) {
         self.actions?(.addImage)
@@ -75,6 +55,8 @@ class SampleViewController: UIViewController {
         }
     }
 }
+
+// MARK: - Navigation bar methods
 
 extension SampleViewController {
     func configureNawBar() {

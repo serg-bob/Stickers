@@ -59,22 +59,22 @@ class StickerView: UIView {
     }
     
     private func appendGestures() {
-        let roation = UIRotationGestureRecognizer(target: self, action: #selector(handleRotation))
-        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch))
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(handlePan))
+        let roation = UIRotationGestureRecognizer(target: self, action: #selector(self.handleRotation))
+        let pinch = UIPinchGestureRecognizer(target: self, action: #selector(self.handlePinch))
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(self.handlePan))
         [roation, pinch, pan].forEach {
             $0.delegate = self
             self.addGestureRecognizer($0)
         }
     }
     
-    @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
+    @objc private func handlePan(_ gesture: UIPanGestureRecognizer) {
         guard gesture.numberOfTouches >= 2 else { return }
         let translation = gesture.translation(in: self.superview)
         self.updateTransform(with: translation, angle: self.angle, scale: self.scale)
     }
     
-    @objc func handleRotation(_ gesture: UIRotationGestureRecognizer) {
+    @objc private func handleRotation(_ gesture: UIRotationGestureRecognizer) {
         guard gesture.numberOfTouches >= 2 else { return }
         let rotate = gesture.rotation - self.tempRotation
         self.tempRotation = gesture.rotation
@@ -82,7 +82,7 @@ class StickerView: UIView {
         self.updateTransform(angle: self.angle, scale: self.scale)
     }
     
-    @objc func handlePinch(_ gesture: UIPinchGestureRecognizer) {
+    @objc private func handlePinch(_ gesture: UIPinchGestureRecognizer) {
         guard gesture.numberOfTouches >= 2 else { return }
         self.scale = gesture.scale * self.savedScale
         self.updateTransform(angle: self.angle, scale: self.scale)

@@ -16,6 +16,7 @@
 		D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77522CCA99F00E71F12 /* SampleView.swift */; };
 		D5BFE77C22CCFDA800E71F12 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */; };
 		D5BFE77D22CCFDA800E71F12 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */; };
+		D5F3323622CE39E800DE7AE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F3323522CE39E800DE7AE7 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D5BFE77522CCA99F00E71F12 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		D5F3323522CE39E800DE7AE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D8E95F76AD9660E401776A25 /* Pods-SampleStickersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleStickersApp.release.xcconfig"; path = "Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +78,7 @@
 		D5BFE75C22CCA4A300E71F12 /* SampleStickersApp */ = {
 			isa = PBXGroup;
 			children = (
-				D5BFE76F22CCA94200E71F12 /* SampleViewController */,
+				D5F3323222CE39A900DE7AE7 /* UI */,
 				D5BFE75D22CCA4A300E71F12 /* AppDelegate.swift */,
 				D5BFE76422CCA4A400E71F12 /* Assets.xcassets */,
 				D5BFE76622CCA4A400E71F12 /* LaunchScreen.storyboard */,
@@ -91,8 +93,6 @@
 				D5BFE77022CCA96A00E71F12 /* View */,
 				D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */,
 				D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */,
-				D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */,
-				D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */,
 			);
 			path = SampleViewController;
 			sourceTree = "<group>";
@@ -103,6 +103,33 @@
 				D5BFE77522CCA99F00E71F12 /* SampleView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D5F3323222CE39A900DE7AE7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D5F3323422CE39CB00DE7AE7 /* BaseViewController */,
+				D5F3323322CE39BD00DE7AE7 /* FirstViewController */,
+				D5BFE76F22CCA94200E71F12 /* SampleViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D5F3323322CE39BD00DE7AE7 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */,
+				D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */,
+			);
+			path = FirstViewController;
+			sourceTree = "<group>";
+		};
+		D5F3323422CE39CB00DE7AE7 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D5F3323522CE39E800DE7AE7 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		FA9AD0300BF5BEA3C5BAF514 /* Frameworks */ = {
@@ -214,14 +241,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Stickers/Stickers.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stickers.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F3323622CE39E800DE7AE7 /* BaseViewController.swift in Sources */,
 				D5BFE77322CCA98F00E71F12 /* SampleViewController.swift in Sources */,
 				D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */,
 				D5BFE75E22CCA4A300E71F12 /* AppDelegate.swift in Sources */,
