@@ -14,6 +14,8 @@
 		D5BFE77322CCA98F00E71F12 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */; };
 		D5BFE77422CCA98F00E71F12 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */; };
 		D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77522CCA99F00E71F12 /* SampleView.swift */; };
+		D5BFE77C22CCFDA800E71F12 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */; };
+		D5BFE77D22CCFDA800E71F12 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 		D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = "<group>"; };
 		D5BFE77522CCA99F00E71F12 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		D8E95F76AD9660E401776A25 /* Pods-SampleStickersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleStickersApp.release.xcconfig"; path = "Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +91,8 @@
 				D5BFE77022CCA96A00E71F12 /* View */,
 				D5BFE77122CCA98F00E71F12 /* SampleViewController.swift */,
 				D5BFE77222CCA98F00E71F12 /* SampleViewController.xib */,
+				D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */,
+				D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */,
 			);
 			path = SampleViewController;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 				D5BFE76822CCA4A400E71F12 /* LaunchScreen.storyboard in Resources */,
 				D5BFE77422CCA98F00E71F12 /* SampleViewController.xib in Resources */,
 				D5BFE76522CCA4A400E71F12 /* Assets.xcassets in Resources */,
+				D5BFE77D22CCFDA800E71F12 /* FirstViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +243,7 @@
 				D5BFE77322CCA98F00E71F12 /* SampleViewController.swift in Sources */,
 				D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */,
 				D5BFE75E22CCA4A300E71F12 /* AppDelegate.swift in Sources */,
+				D5BFE77C22CCFDA800E71F12 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

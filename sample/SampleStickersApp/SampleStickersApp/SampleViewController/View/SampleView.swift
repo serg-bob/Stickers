@@ -10,12 +10,18 @@ import UIKit
 
 class SampleView: UIView {
     
-    @IBOutlet var stickersView: UIView?
-    @IBOutlet var imageButton: UIButton?
-    @IBOutlet var textButton: UIButton?
+    @IBOutlet private var stickersView: UIView?
+    @IBOutlet private var imageButton: UIButton?
+    @IBOutlet private var textButton: UIButton?
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.configure()
     }
+    
+    // MARK: - Private methods
 
+    private func configure() {
+
+    }
 }

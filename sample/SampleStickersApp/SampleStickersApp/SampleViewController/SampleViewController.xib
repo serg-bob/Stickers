@@ -31,7 +31,7 @@
                     </constraints>
                     <state key="normal" title="Image Sticker"/>
                     <connections>
-                        <action selector="addImageSticker:" destination="-1" eventType="touchUpInside" id="7L0-eh-vO3"/>
+                        <action selector="addImageSticker:" destination="-1" eventType="touchUpInside" id="6nj-Uk-dL9"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRz-Vw-BE8">
@@ -42,7 +42,7 @@
                     </constraints>
                     <state key="normal" title="Text Sticker"/>
                     <connections>
-                        <action selector="addTextSticker:" destination="-1" eventType="touchUpInside" id="qxN-ox-clu"/>
+                        <action selector="addTextSticker:" destination="-1" eventType="touchUpInside" id="Rka-lB-3SB"/>
                     </connections>
                 </button>
             </subviews>
