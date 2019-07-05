@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58A87DF76C53D2F6FB19FA185CE48424 /* Stickers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B15D9EC0A65E19A7E881C0E57506F687 /* Stickers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E86BE90FD7DA655AB5372AF185EC8CB /* Stickers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 377A99E30F99557F3DB49536E0580971 /* Stickers-dummy.m */; };
-		81149B949C80B455303358EAE4AC772C /* StickersContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F5A18EAF30E5594DE475C54AA85FBF /* StickersContainerView.swift */; };
+		1E9A8B0DA7F328E95455F0C38F2531C6 /* ResizableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1645A1A37B2BD9D0BE10F39856147682 /* ResizableTextView.swift */; };
+		479FBC33CDEA7433271F96C13AB9E413 /* StickersContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC65EF093B5010CD96D82F1D98F4E823 /* StickersContainerView.swift */; };
+		527B1A5B5096B5B7A8BD28458051C0C0 /* ImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9937E23F7F20EAF149A9D917692B211B /* ImageStickerView.swift */; };
+		58A87DF76C53D2F6FB19FA185CE48424 /* Stickers-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBC726E73F11F13FDF1A0ECA10103A2 /* Stickers-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8543669250F684104E3DC8F7800CA01B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		8CF3A13BA2A43F7E0CE6B308F8FB8811 /* TextStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8D384C7833EBD8BE30ACE8D47E66C7 /* TextStickerView.swift */; };
+		970A5C36CC11312C0F669CB7052CDCA7 /* TouchTransparentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65CFBFF828685759C8AD1E8BEAA69D2 /* TouchTransparentView.swift */; };
 		A009C1DFC96F6B3366ABE9BA27C7E779 /* Pods-SampleStickersApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB7032165A2DB41A0364434E82EAE730 /* Pods-SampleStickersApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A49546BAAC8BBF990EE53E8DAF935FA3 /* KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72921CAAA8FD45357E5DB07C38E471 /* KeyboardNotifications.swift */; };
+		B3ADEE91B87561A74DC8E74FB28DFC48 /* StickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED67E214CAF0D43AC0FA9E45773A832 /* StickerModel.swift */; };
+		BAEAA3FE4AA746C4E726029162DBD609 /* Stickers-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC3EC776061E4C65F906B0BE8CBE362 /* Stickers-dummy.m */; };
 		C8DAF721CB94E5195EBF0F7FF569E537 /* Pods-SampleStickersApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FEF9C82A520CC8C59D27B669FCCBBB /* Pods-SampleStickersApp-dummy.m */; };
-		DA5A3D37D07922D7A95806D7ACBA82BD /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0778A982D43231F0F307C9FCC9EE5 /* StickerView.swift */; };
+		CB1CEA02FAD82137AE0B8D118EAE8081 /* StickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1701CC1C22D0DF61781AD4C5A4C50CD1 /* StickerView.swift */; };
 		E634FE037BE242FFB8AB00F57AB14ED4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,28 +34,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC0778A982D43231F0F307C9FCC9EE5 /* StickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickerView.swift; path = source/StickerView.swift; sourceTree = "<group>"; };
+		1645A1A37B2BD9D0BE10F39856147682 /* ResizableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizableTextView.swift; path = source/ResizableTextView.swift; sourceTree = "<group>"; };
+		1701CC1C22D0DF61781AD4C5A4C50CD1 /* StickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickerView.swift; path = source/StickerView.swift; sourceTree = "<group>"; };
 		3506375FCABA99F18B47929CF171FD9F /* Pods-SampleStickersApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SampleStickersApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		377A99E30F99557F3DB49536E0580971 /* Stickers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Stickers-dummy.m"; sourceTree = "<group>"; };
-		3B6452DF56588A1937D682365F57E088 /* Stickers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Stickers-prefix.pch"; sourceTree = "<group>"; };
+		3C72921CAAA8FD45357E5DB07C38E471 /* KeyboardNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardNotifications.swift; path = source/KeyboardNotifications.swift; sourceTree = "<group>"; };
+		434223A2FE90397B5E7A89A71E1FF4B7 /* Stickers-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Stickers-Info.plist"; sourceTree = "<group>"; };
 		5B04E7C319845D042BF6CF84E9257953 /* Pods-SampleStickersApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SampleStickersApp-Info.plist"; sourceTree = "<group>"; };
-		60F83C717839FF254A50D829B2648FCD /* Stickers.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Stickers.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		68F5A18EAF30E5594DE475C54AA85FBF /* StickersContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickersContainerView.swift; path = source/StickersContainerView.swift; sourceTree = "<group>"; };
-		98325A125010906508C7B17A7261D317 /* Stickers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Stickers.modulemap; sourceTree = "<group>"; };
+		7BBC726E73F11F13FDF1A0ECA10103A2 /* Stickers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Stickers-umbrella.h"; sourceTree = "<group>"; };
+		9937E23F7F20EAF149A9D917692B211B /* ImageStickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageStickerView.swift; path = source/ImageStickerView.swift; sourceTree = "<group>"; };
+		995302ADFB0B737FC79ACFBB3F2BD6C5 /* Stickers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Stickers.xcconfig; sourceTree = "<group>"; };
 		9BBB4BE3285750195AD8EDFBD50B91F5 /* Pods-SampleStickersApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SampleStickersApp.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B15D9EC0A65E19A7E881C0E57506F687 /* Stickers-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Stickers-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B41E636B3B23F173EEB9962999BC77B5 /* Pods-SampleStickersApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SampleStickersApp-frameworks.sh"; sourceTree = "<group>"; };
 		B718365FC30288B84BAC23DBB9CA7DD2 /* Pods-SampleStickersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SampleStickersApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BC8D384C7833EBD8BE30ACE8D47E66C7 /* TextStickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextStickerView.swift; path = source/TextStickerView.swift; sourceTree = "<group>"; };
 		BF4D00B6AFEE65DF30928785B37F6F54 /* Pods-SampleStickersApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SampleStickersApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		C9F58481175C0E696CA9CFDB5212011C /* Stickers.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Stickers.xcconfig; sourceTree = "<group>"; };
+		C4B5993C97D222505A34086975BBA8E7 /* Stickers.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Stickers.modulemap; sourceTree = "<group>"; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D2029D16689E6FDB190917797FFA40B2 /* Pods_SampleStickersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleStickersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC65EF093B5010CD96D82F1D98F4E823 /* StickersContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickersContainerView.swift; path = source/StickersContainerView.swift; sourceTree = "<group>"; };
+		D2029D16689E6FDB190917797FFA40B2 /* Pods_SampleStickersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SampleStickersApp.framework; path = "Pods-SampleStickersApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65CFBFF828685759C8AD1E8BEAA69D2 /* TouchTransparentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TouchTransparentView.swift; path = source/TouchTransparentView.swift; sourceTree = "<group>"; };
+		DED67E214CAF0D43AC0FA9E45773A832 /* StickerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickerModel.swift; path = source/StickerModel.swift; sourceTree = "<group>"; };
 		E3FEF9C82A520CC8C59D27B669FCCBBB /* Pods-SampleStickersApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SampleStickersApp-dummy.m"; sourceTree = "<group>"; };
 		E54B006BD4838FD5FC42A344B1C53B8F /* Pods-SampleStickersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SampleStickersApp.release.xcconfig"; sourceTree = "<group>"; };
-		F1D1ED2B8F8C58BF15A8585A2B4749B9 /* Stickers-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Stickers-Info.plist"; sourceTree = "<group>"; };
-		F7EC5C3A9018E4A957EE9E3B7A615BB4 /* Stickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Stickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE7DA041A5665D688D03A15D1AB71775 /* Stickers.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Stickers.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F7EC5C3A9018E4A957EE9E3B7A615BB4 /* Stickers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Stickers.framework; path = Stickers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAFBCCFFB363100A47966FB94840E1F4 /* Stickers-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Stickers-prefix.pch"; sourceTree = "<group>"; };
 		FB7032165A2DB41A0364434E82EAE730 /* Pods-SampleStickersApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SampleStickersApp-umbrella.h"; sourceTree = "<group>"; };
+		FCC3EC776061E4C65F906B0BE8CBE362 /* Stickers-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Stickers-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,20 +84,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03D8CDE9D5A19067FED00866F5571F4A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				98325A125010906508C7B17A7261D317 /* Stickers.modulemap */,
-				C9F58481175C0E696CA9CFDB5212011C /* Stickers.xcconfig */,
-				377A99E30F99557F3DB49536E0580971 /* Stickers-dummy.m */,
-				F1D1ED2B8F8C58BF15A8585A2B4749B9 /* Stickers-Info.plist */,
-				3B6452DF56588A1937D682365F57E088 /* Stickers-prefix.pch */,
-				B15D9EC0A65E19A7E881C0E57506F687 /* Stickers-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "sample/SampleStickersApp/Pods/Target Support Files/Stickers";
-			sourceTree = "<group>";
-		};
 		35B0100F5AA0474CA4743061187D3674 /* Pods-SampleStickersApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,18 +101,6 @@
 			path = "Target Support Files/Pods-SampleStickersApp";
 			sourceTree = "<group>";
 		};
-		38294F244E7F2F3843800E183C21A958 /* Stickers */ = {
-			isa = PBXGroup;
-			children = (
-				68F5A18EAF30E5594DE475C54AA85FBF /* StickersContainerView.swift */,
-				0BC0778A982D43231F0F307C9FCC9EE5 /* StickerView.swift */,
-				81DD98A8D92B3F11004F528F8743F50A /* Pod */,
-				03D8CDE9D5A19067FED00866F5571F4A /* Support Files */,
-			);
-			name = Stickers;
-			path = ../../..;
-			sourceTree = "<group>";
-		};
 		7FCAB115CA9E832D615DC86EE1B36B06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,12 +110,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81DD98A8D92B3F11004F528F8743F50A /* Pod */ = {
+		80F08D8515BEE98DA5A86D0EAA998417 /* Stickers */ = {
 			isa = PBXGroup;
 			children = (
-				60F83C717839FF254A50D829B2648FCD /* Stickers.podspec */,
+				9937E23F7F20EAF149A9D917692B211B /* ImageStickerView.swift */,
+				3C72921CAAA8FD45357E5DB07C38E471 /* KeyboardNotifications.swift */,
+				1645A1A37B2BD9D0BE10F39856147682 /* ResizableTextView.swift */,
+				DED67E214CAF0D43AC0FA9E45773A832 /* StickerModel.swift */,
+				CC65EF093B5010CD96D82F1D98F4E823 /* StickersContainerView.swift */,
+				1701CC1C22D0DF61781AD4C5A4C50CD1 /* StickerView.swift */,
+				BC8D384C7833EBD8BE30ACE8D47E66C7 /* TextStickerView.swift */,
+				D65CFBFF828685759C8AD1E8BEAA69D2 /* TouchTransparentView.swift */,
+				9C0A1A95B74400A960D0F4DBD507D994 /* Pod */,
+				D4FB5257915397F2DB464E1FB61D3E29 /* Support Files */,
 			);
-			name = Pod;
+			name = Stickers;
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
@@ -140,12 +136,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9E896819BB1874009D5E13D78A11561E /* Development Pods */ = {
+		9C0A1A95B74400A960D0F4DBD507D994 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				38294F244E7F2F3843800E183C21A958 /* Stickers */,
+				EE7DA041A5665D688D03A15D1AB71775 /* Stickers.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C882C383A0988E197776B0F6F4065831 /* Targets Support Files */ = {
@@ -160,7 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				9E896819BB1874009D5E13D78A11561E /* Development Pods */,
+				D3352FC8135C6AC83CCAFEBCBC9B79D9 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				7FCAB115CA9E832D615DC86EE1B36B06 /* Products */,
 				C882C383A0988E197776B0F6F4065831 /* Targets Support Files */,
@@ -173,6 +169,28 @@
 				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3352FC8135C6AC83CCAFEBCBC9B79D9 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80F08D8515BEE98DA5A86D0EAA998417 /* Stickers */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		D4FB5257915397F2DB464E1FB61D3E29 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4B5993C97D222505A34086975BBA8E7 /* Stickers.modulemap */,
+				995302ADFB0B737FC79ACFBB3F2BD6C5 /* Stickers.xcconfig */,
+				FCC3EC776061E4C65F906B0BE8CBE362 /* Stickers-dummy.m */,
+				434223A2FE90397B5E7A89A71E1FF4B7 /* Stickers-Info.plist */,
+				FAFBCCFFB363100A47966FB94840E1F4 /* Stickers-prefix.pch */,
+				7BBC726E73F11F13FDF1A0ECA10103A2 /* Stickers-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "sample/SampleStickersApp/Pods/Target Support Files/Stickers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +220,7 @@
 			buildConfigurationList = 595FD231CD0326C5A22C1186FFFA7F9B /* Build configuration list for PBXNativeTarget "Stickers" */;
 			buildPhases = (
 				2D6D40CAD08C71F1EF2FAB357BF8D305 /* Headers */,
-				38F017AB72D74B66CF599FFE9F816235 /* Sources */,
+				903123CE02CA390FA512A203C8514039 /* Sources */,
 				6D12EE8C86BD518E257F8F8815F1B739 /* Frameworks */,
 				A75C0FF5E8D35C97140A0CC7F2A6490F /* Resources */,
 			);
@@ -241,14 +259,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -280,13 +297,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38F017AB72D74B66CF599FFE9F816235 /* Sources */ = {
+		903123CE02CA390FA512A203C8514039 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E86BE90FD7DA655AB5372AF185EC8CB /* Stickers-dummy.m in Sources */,
-				81149B949C80B455303358EAE4AC772C /* StickersContainerView.swift in Sources */,
-				DA5A3D37D07922D7A95806D7ACBA82BD /* StickerView.swift in Sources */,
+				527B1A5B5096B5B7A8BD28458051C0C0 /* ImageStickerView.swift in Sources */,
+				A49546BAAC8BBF990EE53E8DAF935FA3 /* KeyboardNotifications.swift in Sources */,
+				1E9A8B0DA7F328E95455F0C38F2531C6 /* ResizableTextView.swift in Sources */,
+				B3ADEE91B87561A74DC8E74FB28DFC48 /* StickerModel.swift in Sources */,
+				BAEAA3FE4AA746C4E726029162DBD609 /* Stickers-dummy.m in Sources */,
+				479FBC33CDEA7433271F96C13AB9E413 /* StickersContainerView.swift in Sources */,
+				CB1CEA02FAD82137AE0B8D118EAE8081 /* StickerView.swift in Sources */,
+				8CF3A13BA2A43F7E0CE6B308F8FB8811 /* TextStickerView.swift in Sources */,
+				970A5C36CC11312C0F669CB7052CDCA7 /* TouchTransparentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +337,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -379,7 +401,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -438,7 +459,7 @@
 		};
 		9DA96310CFF647E9A8CDDB1491F758C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9F58481175C0E696CA9CFDB5212011C /* Stickers.xcconfig */;
+			baseConfigurationReference = 995302ADFB0B737FC79ACFBB3F2BD6C5 /* Stickers.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -552,7 +573,7 @@
 		};
 		F7C98E38A8B4BEC6C1D7AF6C7036A7C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9F58481175C0E696CA9CFDB5212011C /* Stickers.xcconfig */;
+			baseConfigurationReference = 995302ADFB0B737FC79ACFBB3F2BD6C5 /* Stickers.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";

@@ -1,7 +1,7 @@
 platform :ios, '12.0'
 
 def available_pod
-  pod 'Stickers', :path => '../..'    
+  pod 'Stickers', :path => '../..'
 end
 
 target 'SampleStickersApp' do

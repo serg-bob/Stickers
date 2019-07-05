@@ -6,13 +6,15 @@
 //  Copyright © 2019 IDAP Group. All rights reserved.
 //
 
-import UIKit
+import Stickers
 
 class SampleView: UIView {
     
     @IBOutlet private var stickersView: UIView?
     @IBOutlet private var imageButton: UIButton?
     @IBOutlet private var textButton: UIButton?
+    
+    var stickerConteinerView: StickersContainerView?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +24,8 @@ class SampleView: UIView {
     // MARK: - Private methods
 
     private func configure() {
-
+        self.stickersView.map {
+            self.stickerConteinerView = StickersContainerView(inView: $0)
+        }
     }
 }

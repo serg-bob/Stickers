@@ -6,7 +6,6 @@
 //  Copyright © 2019 IDAP Group. All rights reserved.
 //
 
-import UIKit
 import Stickers
 
 class SampleViewController: BaseViewController<SampleView, SampleViewController.CallbackEvents> {
@@ -45,11 +44,16 @@ class SampleViewController: BaseViewController<SampleView, SampleViewController.
     // MARK: - Private methods
     
     private func bindActions() {
-        self.actions = { events in
+        self.actions = { [weak self] events in
             switch events {
             case .addImage:
-                debugPrint("addImage")
+                UIImage(named: "diamond").map {
+                    let model = StickerModel(content: .stickerImage($0))
+                    self?.rootView?.stickerConteinerView?.append(model: model)
+                }
             case  .addText:
+//                let model = StickerModel(content: .stickerText(""))
+//                self?.rootView?.stickerConteinerView?.append(model: model)
                 debugPrint("addText")
             }
         }

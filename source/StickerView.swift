@@ -5,7 +5,7 @@
 //  Created by Sergey Penziy on 7/3/19.
 //
 
-class StickerView: UIView {
+public class StickerView: UIView {
     
     private(set) var savedScale: CGFloat = 1.0
     private(set) var tempRotation: CGFloat = 0.0
@@ -14,7 +14,7 @@ class StickerView: UIView {
     
     // MARK: - Override methods
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.savedScale = self.scaleX
         self.tempRotation = 0
@@ -22,7 +22,7 @@ class StickerView: UIView {
     
     // MARK: - Public methods
     
-    func configure() {
+    public func configure() {
         self.isMultipleTouchEnabled = true
         self.isUserInteractionEnabled = true
         self.backgroundColor = .clear
@@ -32,16 +32,17 @@ class StickerView: UIView {
         self.appendGestures()
     }
     
-    func appendSubview(_ view: UIView) {
+    public func appendSubview(_ view: UIView) {
         self.addSubview(view)
         self.frame = view.frame
         self.appendConstraints(to: view)
     }
     
-    func updateTransform(with translationOfset: CGPoint = CGPoint.zero, angle: CGFloat, scale: CGFloat) {
-        self.transform = CGAffineTransform(translationX: translationOfset.x, y: translationOfset.y)
-        self.transform = self.transform.rotated(by: angle)
-        self.transform = self.transform.scaledBy(x: scale, y: scale)
+    public func updateTransform(with translationOffset: CGPoint = CGPoint.zero, angle: CGFloat, scale: CGFloat) {
+        var transform = CGAffineTransform(translationX: translationOffset.x, y: translationOffset.y)
+        transform = transform.rotated(by: angle)
+        transform = transform.scaledBy(x: scale, y: scale)
+        self.transform = transform
     }
     
     // MARK: - Private methods
@@ -54,7 +55,7 @@ class StickerView: UIView {
                                            options: NSLayoutConstraint.FormatOptions(rawValue: 0),
                                            metrics: nil,
                                            views: views)
-            }.flatMap{$0}
+            }.flatMap{ $0 }
         self.addConstraints(constraints)
     }
     
@@ -92,7 +93,9 @@ class StickerView: UIView {
 // MARK: - UIGestureRecognizerDelegate
 
 extension StickerView: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool
+    {
         return true
     }
 }
