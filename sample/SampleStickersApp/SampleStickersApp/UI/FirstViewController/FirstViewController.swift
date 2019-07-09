@@ -8,7 +8,11 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: BaseViewController<FirstView, FirstViewController.EmptyEvents> {
+    
+    enum EmptyEvents {
+        case none
+    }
     
     // MARK: - Action
 
@@ -21,7 +25,8 @@ class FirstViewController: UIViewController {
     
     private func callback(_ events: SampleViewController.CallbackEvents) {
         switch events {
-        case .back:
+        case .back(let image):
+            self.rootView?.imageView?.image = image
             self.navigationController?.popViewController(animated: true)
         }
     }

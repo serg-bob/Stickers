@@ -28,6 +28,8 @@ class SampleView: UIView {
         self.configure()
     }
     
+    
+    
     // MARK: - Action
     
     @IBAction func addImageSticker(_ sender: UIButton) {

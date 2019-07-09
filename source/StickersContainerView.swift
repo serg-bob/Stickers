@@ -39,6 +39,10 @@ public class StickersContainerView: TouchTransparentView {
         sticker.map(self.append)
     }
     
+    public func getImageWithStickers() -> UIImage {
+        return self.imageSnapshot()
+    }
+    
     // MARK: - Private methods
     
     private func createTextSticker(with text: String) -> TextStickerView {

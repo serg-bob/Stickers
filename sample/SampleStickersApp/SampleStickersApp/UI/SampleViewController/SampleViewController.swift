@@ -11,7 +11,7 @@ import UIKit
 class SampleViewController: BaseViewController<SampleView, SampleViewController.CallbackEvents> {
     
     enum CallbackEvents {
-        case back
+        case back(UIImage?)
     }
     
     // MARK: - View Controller Lifecycle
@@ -36,10 +36,11 @@ extension SampleViewController {
     }
     
     @objc private func onBack() {
-        self.callbackEvents(.back)
+        self.callbackEvents(.back(nil))
     }
     
     @objc private func onSave() {
-        self.callbackEvents(.back)
+        let image = self.rootView?.stickerConteinerView?.getImageWithStickers()
+        self.callbackEvents(.back(image))
     }
 }

@@ -5,13 +5,13 @@
 //  Created by Sergey Penziy on 7/9/19.
 //
 
-public extension UIView {
+extension UIView {
     
-    var topSafeAreaHeight: CGFloat {
+    public var topSafeAreaHeight: CGFloat {
         return self.safeAreaLayoutGuide.layoutFrame.origin.y
     }
     
-    func append(to view: UIView)  {
+    public func append(to view: UIView)  {
         self.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(self)
         let views = ["view": self]
@@ -24,7 +24,7 @@ public extension UIView {
         view.addConstraints(constraints)
     }
     
-    func performAnimation(duration: TimeInterval = 0.2,
+    public func performAnimation(duration: TimeInterval = 0.2,
                           block: @escaping () -> Void,
                           completion: (() -> Void)? = nil)
     {
@@ -33,5 +33,21 @@ public extension UIView {
                        animations: { self.layoutIfNeeded() },
                        completion: { if $0 { completion?() }
         })
+    }
+    
+    public func imageSnapshot() -> UIImage {
+        let resultSize = self.bounds.size
+        let resultRect = CGRect(origin: CGPoint.zero, size: resultSize)
+        let renderer = self.defaultSnapshotRenderer()
+        return renderer.image { rendererContext in
+            self.drawHierarchy(in: resultRect, afterScreenUpdates: false)
+        }
+    }
+    
+    private func defaultSnapshotRenderer() -> UIGraphicsImageRenderer {
+        let format = UIGraphicsImageRendererFormat.default()
+        format.scale = UIScreen.main.scale
+        format.opaque = false
+        return UIGraphicsImageRenderer(size: self.frame.size, format: format)
     }
 }

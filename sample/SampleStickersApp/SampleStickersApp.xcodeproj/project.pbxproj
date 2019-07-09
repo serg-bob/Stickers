@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5BA536AAE32AE15FBC2744F4 /* Pods_SampleStickersApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1806216E9A568D5C78E2243 /* Pods_SampleStickersApp.framework */; };
+		D5397DD022D4E61400158F5B /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5397DCF22D4E61400158F5B /* FirstView.swift */; };
 		D5BFE75E22CCA4A300E71F12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BFE75D22CCA4A300E71F12 /* AppDelegate.swift */; };
 		D5BFE76522CCA4A400E71F12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE76422CCA4A400E71F12 /* Assets.xcassets */; };
 		D5BFE76822CCA4A400E71F12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BFE76622CCA4A400E71F12 /* LaunchScreen.storyboard */; };
@@ -23,6 +24,7 @@
 		A3FBE07AFD040815C9C943B0 /* Pods-SampleStickersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleStickersApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C1806216E9A568D5C78E2243 /* Pods_SampleStickersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleStickersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5397DCD22D4D92200158F5B /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
+		D5397DCF22D4E61400158F5B /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		D5BFE75A22CCA4A300E71F12 /* SampleStickersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleStickersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BFE75D22CCA4A300E71F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BFE76422CCA4A400E71F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 				D8E95F76AD9660E401776A25 /* Pods-SampleStickersApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D5397DCE22D4E60100158F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5397DCF22D4E61400158F5B /* FirstView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D5BFE75122CCA4A300E71F12 = {
@@ -120,6 +130,7 @@
 		D5F3323322CE39BD00DE7AE7 /* FirstViewController */ = {
 			isa = PBXGroup;
 			children = (
+				D5397DCE22D4E60100158F5B /* View */,
 				D5BFE77A22CCFDA800E71F12 /* FirstViewController.swift */,
 				D5BFE77B22CCFDA800E71F12 /* FirstViewController.xib */,
 			);
@@ -264,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F3323622CE39E800DE7AE7 /* BaseViewController.swift in Sources */,
+				D5397DD022D4E61400158F5B /* FirstView.swift in Sources */,
 				D5BFE77322CCA98F00E71F12 /* SampleViewController.swift in Sources */,
 				D5BFE77622CCA99F00E71F12 /* SampleView.swift in Sources */,
 				D5BFE75E22CCA4A300E71F12 /* AppDelegate.swift in Sources */,

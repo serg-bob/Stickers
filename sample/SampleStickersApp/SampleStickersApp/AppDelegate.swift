@@ -16,13 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let controller = FirstViewController()
+        let controller = FirstViewController(callbackEvents: self.emptyCompletion)
         let navController = UINavigationController(rootViewController: controller)
         window.rootViewController = navController
         self.window = window
         window.makeKeyAndVisible()
         
         return true
+    }
+    
+    private func emptyCompletion(_ events: FirstViewController.EmptyEvents) {
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

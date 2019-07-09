@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias EventHandler<Events> = (Events) -> ()
+public typealias EventHandler<Events> = (Events) -> ()
 
 class BaseViewController<RootViewType: UIView, Events>: UIViewController {
 
