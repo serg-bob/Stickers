@@ -5,9 +5,9 @@
 //  Created by Sergey Penziy on 7/9/19.
 //
 
-public extension UITextView {
+extension UITextView {
     
-    func updateTextFont(with maxTextViewSize: CGSize, maxFontSize: CGFloat) -> CGSize {
+    public func updateTextFont(with maxTextViewSize: CGSize, maxFontSize: CGFloat) -> CGSize {
         self.sizeToFit()
         if (self.text.isEmpty || self.bounds.size.equalTo(CGSize.zero)) { return self.frame.size }
         let contentSize = self.contentSize
@@ -29,12 +29,13 @@ public extension UITextView {
                 expectSize = self.sizeThatFits(tempSize)
             }
         }
-        if expectSize.height > maxHeight {
-            while expectSize.height > maxHeight {
-                self.font = expectFont.withSize(expectFont.pointSize - 1)
-                expectSize = self.sizeThatFits(tempSize)
-            }
+        
+        while expectSize.height >= maxHeight {
+            expectFont = expectFont.withSize(expectFont.pointSize - 1)
+            self.font = expectFont
+            expectSize = self.sizeThatFits(tempSize)
         }
+
         return expectSize
     }
 }

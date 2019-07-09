@@ -22,6 +22,7 @@
 /* Begin PBXFileReference section */
 		A3FBE07AFD040815C9C943B0 /* Pods-SampleStickersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleStickersApp.debug.xcconfig"; path = "Target Support Files/Pods-SampleStickersApp/Pods-SampleStickersApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C1806216E9A568D5C78E2243 /* Pods_SampleStickersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleStickersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5397DCD22D4D92200158F5B /* Sample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Bridging-Header.h"; sourceTree = "<group>"; };
 		D5BFE75A22CCA4A300E71F12 /* SampleStickersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleStickersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BFE75D22CCA4A300E71F12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BFE76422CCA4A400E71F12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 				D5BFE76422CCA4A400E71F12 /* Assets.xcassets */,
 				D5BFE76622CCA4A400E71F12 /* LaunchScreen.storyboard */,
 				D5BFE76922CCA4A400E71F12 /* Info.plist */,
+				D5397DCD22D4D92200158F5B /* Sample-Bridging-Header.h */,
 			);
 			path = SampleStickersApp;
 			sourceTree = "<group>";
@@ -151,7 +153,7 @@
 				D5BFE75622CCA4A300E71F12 /* Sources */,
 				D5BFE75722CCA4A300E71F12 /* Frameworks */,
 				D5BFE75822CCA4A300E71F12 /* Resources */,
-				3C8DF10C9666BD717B1BB2B5 /* [CP] Embed Pods Frameworks */,
+				F521D61446000CD1DEE2973E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,7 +234,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3C8DF10C9666BD717B1BB2B5 /* [CP] Embed Pods Frameworks */ = {
+		F521D61446000CD1DEE2973E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,6 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.idapgroup.SampleStickersApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleStickersApp/Sample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -432,6 +435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.idapgroup.SampleStickersApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SampleStickersApp/Sample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

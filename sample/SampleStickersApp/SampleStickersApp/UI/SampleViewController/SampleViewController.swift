@@ -26,12 +26,20 @@ class SampleViewController: BaseViewController<SampleView, SampleViewController.
 
 extension SampleViewController {
     func configureNawBar() {
-        self.navigationController?.navigationItem.backBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
-                                                                                      target: self,
-                                                                                      action: #selector(self.onBack))
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
+                                                                target: self,
+                                                                action: #selector(self.onBack))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save",
+                                                                 style: .done,
+                                                                 target: self,
+                                                                 action: #selector(self.onSave))
     }
     
     @objc private func onBack() {
+        self.callbackEvents(.back)
+    }
+    
+    @objc private func onSave() {
         self.callbackEvents(.back)
     }
 }
