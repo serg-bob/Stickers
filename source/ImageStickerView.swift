@@ -1,6 +1,6 @@
 //
 //  ImageStickerView.swift
-//  Pods-SampleStickersApp
+//  Stickers
 //
 //  Created by Sergey Penziy on 7/5/19.
 //
@@ -24,5 +24,4 @@ class ImageStickerView: StickerView {
         self.imageView = imageView
         self.appendSubview(imageView)
     }
-    
 }

@@ -1,6 +1,6 @@
 //
 //  TouchTransparentView.swift
-//  Pods-SampleStickersApp
+//  Stickers
 //
 //  Created by Sergey Penziy on 7/5/19.
 //

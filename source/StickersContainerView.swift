@@ -1,32 +1,25 @@
 //
 //  StickersContainerView.swift
-//  Pods-SampleStickersApp
+//  Stickers
 //
 //  Created by Sergey Penziy on 7/4/19.
 //
-
-import UIKit
 
 public class StickersContainerView: TouchTransparentView {
     
     private var stickers = [StickerView]()
     private var selectedSticker: StickerView?
+    private var backgroundView: TextStickerBackgroundView?
+    
+    private let keyboardNotifications = KeyboardNotifications()
 
     // MARK: - Initializations and Deallocations
     
     public init(inView: UIView)  {
         super.init(frame: inView.bounds)
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
-        inView.addSubview(self)
-        let views = ["view": self]
-        let constraints = ["H:|[view]|", "V:|[view]|"].map {
-            NSLayoutConstraint.constraints(withVisualFormat: $0,
-                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                           metrics: nil,
-                                           views: views)
-            }.flatMap{$0}
-        inView.addConstraints(constraints)
+        self.append(to: inView)
+        self.createBackgroundView()
+        self.bindKeyboardNotifications()
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -62,6 +55,12 @@ public class StickersContainerView: TouchTransparentView {
         return imageSticker
     }
     
+    private func createBackgroundView() {
+        let view = TextStickerBackgroundView(frame: UIScreen.main.bounds)
+        view.delegate = self
+        self.backgroundView = view
+    }
+    
     private func append(sticker: StickerView) {
         self.createDragGesture(to: sticker)
         self.addSubview(sticker)
@@ -72,6 +71,53 @@ public class StickersContainerView: TouchTransparentView {
         } else {
             sticker.center = self.center
         }
+    }
+    
+    private func bindKeyboardNotifications() {
+        self.keyboardNotifications.animatingParameters = { [weak self] (keyboardState, endFrame, duration) in
+            self?.updateView(with: (keyboardState, endFrame, duration))
+        }
+    }
+    
+    func updateView(with keyboardParameters: (KeyboardState, CGRect, Double)) {
+        let (keyboardState, keyboardFrame, duration) = keyboardParameters
+        if let backgroundView = self.backgroundView, let sticker = self.selectedSticker as? TextStickerView {
+            switch keyboardState {
+            case .showKeyboard:
+                self.insertSubview(backgroundView, belowSubview: sticker)
+            case .hideKeyboard:
+                if sticker.isEmpty {
+                    self.remove(sticker: sticker)
+                } else {
+                    self.insertSubview(sticker, at: sticker.startIndex)
+                }
+            }
+            let closeButtonFrame = backgroundView.closeButtonFrame
+            let yPosition = closeButtonFrame.origin.y + closeButtonFrame.size.height + self.topSafeAreaHeight
+            let presentViewFrame = CGRect(origin: CGPoint(x: 0, y: yPosition),
+                                          size: CGSize(width: self.frame.size.width,
+                                                       height: self.frame.size.height - keyboardFrame.size.height - yPosition))
+            sticker.updateSize(with: presentViewFrame, keyboardState: keyboardState)
+            self.performAnimation(duration: duration, block: { [weak self] in
+                self?.setStickerCenter(height: keyboardFrame.size.height, keyboardState: keyboardState)
+            })
+        }
+    }
+    
+    private func setStickerCenter(height: CGFloat, keyboardState: KeyboardState) {
+        switch keyboardState {
+        case .showKeyboard:
+            return
+        case .hideKeyboard:
+            guard let savedCenter = (self.selectedSticker as? TextStickerView)?.savedCenter else { return }
+            self.selectedSticker?.center = savedCenter
+        }
+    }
+    
+    private func remove(sticker: StickerView) {
+        self.stickers.firstIndex(of: sticker)
+            .map { self.stickers.remove(at: $0) }?
+            .removeFromSuperview()
     }
     
     private func createDragGesture(to view: UIView) {
@@ -107,5 +153,13 @@ public class StickersContainerView: TouchTransparentView {
             if let view = view as? TextStickerView, view.isEditing { return }
             self.drag(view: view, gesture: gesture)
         }
+    }
+}
+
+// MARK: - EditMomentBackgroundViewDelegate
+
+extension StickersContainerView: TextStickerBackgroundViewDelegate {
+    func backgroundViewDidClose(_ view: TextStickerBackgroundView) {
+        (self.selectedSticker as? TextStickerView)?.endEditing()
     }
 }

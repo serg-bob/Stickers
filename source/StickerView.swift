@@ -1,6 +1,6 @@
 //
 //  StickerView.swift
-//  IDPCastable
+//  Stickers
 //
 //  Created by Sergey Penziy on 7/3/19.
 //
@@ -33,9 +33,8 @@ public class StickerView: UIView {
     }
     
     public func appendSubview(_ view: UIView) {
-        self.addSubview(view)
         self.frame = view.frame
-        self.appendConstraints(to: view)
+        view.append(to: self)
     }
     
     public func updateTransform(with translationOffset: CGPoint = CGPoint.zero, angle: CGFloat, scale: CGFloat) {
@@ -46,18 +45,6 @@ public class StickerView: UIView {
     }
     
     // MARK: - Private methods
-    
-    private func appendConstraints(to view: UIView) {
-        view.translatesAutoresizingMaskIntoConstraints = false
-        let views = ["view": view]
-        let constraints = ["H:|[view]|", "V:|[view]|"].map {
-            NSLayoutConstraint.constraints(withVisualFormat: $0,
-                                           options: NSLayoutConstraint.FormatOptions(rawValue: 0),
-                                           metrics: nil,
-                                           views: views)
-            }.flatMap{ $0 }
-        self.addConstraints(constraints)
-    }
     
     private func appendGestures() {
         let roation = UIRotationGestureRecognizer(target: self, action: #selector(self.handleRotation))

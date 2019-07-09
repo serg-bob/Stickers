@@ -1,6 +1,6 @@
 //
 //  ResizableTextView.swift
-//  Pods-SampleStickersApp
+//  Stickers
 //
 //  Created by Sergey Penziy on 7/5/19.
 //
@@ -12,7 +12,7 @@ struct TextViewSettings {
     
     static func `default`() -> TextViewSettings {
         return TextViewSettings(font: UIFont.boldSystemFont(ofSize: 33),
-                                textColor: UIColor.white,
+                                textColor: UIColor.black,
                                 backgroundColor: UIColor.clear)
     }
 }
@@ -40,5 +40,4 @@ class ResizableTextView: UITextView {
     func updateText(color: UIColor) {
         self.textColor = color
     }
-    
 }
