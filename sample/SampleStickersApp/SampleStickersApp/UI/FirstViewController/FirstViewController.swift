@@ -9,16 +9,20 @@
 import UIKit
 
 class FirstViewController: UIViewController {
+    
+    // MARK: - Action
 
     @IBAction func onPresent() {
-        let callbackEvents: EventHandler<SampleViewController.CallbackEvents> = { events in
-            switch events {
-            case .back:
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-        let controller = SampleViewController(callbackEvents: callbackEvents)
+        let controller = SampleViewController(callbackEvents: self.callback)
         self.navigationController?.pushViewController(controller, animated: true)
     }
-
+    
+    // MARK: - Private methods
+    
+    private func callback(_ events: SampleViewController.CallbackEvents) {
+        switch events {
+        case .back:
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }

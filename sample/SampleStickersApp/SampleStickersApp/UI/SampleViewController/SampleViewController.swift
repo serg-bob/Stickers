@@ -6,7 +6,7 @@
 //  Copyright © 2019 IDAP Group. All rights reserved.
 //
 
-import Stickers
+import UIKit
 
 class SampleViewController: BaseViewController<SampleView, SampleViewController.CallbackEvents> {
     
@@ -14,49 +14,11 @@ class SampleViewController: BaseViewController<SampleView, SampleViewController.
         case back
     }
     
-    enum ButtonActions {
-        case addImage
-        case addText
-    }
-    
-    // MARK: - Properties
-    
-    public var actions: EventHandler<ButtonActions>?
-    
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNawBar()
-        self.bindActions()
-    }
-    
-    // MARK: - Action
-    
-    @IBAction func addImageSticker(_ sender: UIButton) {
-        self.actions?(.addImage)
-    }
-    
-    @IBAction func addTextSticker(_ sender: UIButton) {
-        self.actions?(.addText)
-    }
-    
-    // MARK: - Private methods
-    
-    private func bindActions() {
-        self.actions = { [weak self] events in
-            switch events {
-            case .addImage:
-                UIImage(named: "diamond").map {
-                    let model = StickerModel(content: .stickerImage($0))
-                    self?.rootView?.stickerConteinerView?.append(model: model)
-                }
-            case  .addText:
-//                let model = StickerModel(content: .stickerText(""))
-//                self?.rootView?.stickerConteinerView?.append(model: model)
-                debugPrint("addText")
-            }
-        }
     }
 }
 

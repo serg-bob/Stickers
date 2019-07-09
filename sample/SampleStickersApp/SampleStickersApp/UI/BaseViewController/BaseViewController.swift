@@ -10,7 +10,7 @@ import UIKit
 
 typealias EventHandler<Events> = (Events) -> ()
 
-class BaseViewController<RootViewType, Events>: UIViewController {
+class BaseViewController<RootViewType: UIView, Events>: UIViewController {
 
     public let callbackEvents: EventHandler<Events>
     public var rootView: RootViewType? {
